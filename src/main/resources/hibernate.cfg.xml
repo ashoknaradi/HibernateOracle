@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- ===============ORACLE=========================== -->
+		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@127.0.0.1:1521:orcl</property>
+		<property name="hibernate.connection.username">system</property>
+		<property name="hibernate.connection.password">oracle</property>
+		<property name="hibernate.default_schema">SYSTEM</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="show_sql">true</property>
+  
+		<!-- List of mapping classes -->
+		<mapping class="Pojos.User"/>
+		<mapping class="Pojos.Student"/>
+		<mapping class="Pojos.Passport"/>
+		<mapping class="Pojos.College"/>
+		<mapping class="Pojos.University"/>
+		<mapping class="Pojos.Courses"/>
+		<mapping class="Pojos.ManyStudents"/>
+	</session-factory>
+</hibernate-configuration>
